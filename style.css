@@ -1,3 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+
+*{ /*tamanho da imagem inicial*/
+     margin: 0;
+     padding: 0;
+    
+}
+
+header
+{
+    width: 100%; /*bordas laterais*/
+    
+    height: 100vh; /* vh deixa a imagem no tamanho da tela inicial*/
+    
+    overflow: hidden; /*Tira a barra de rolagem lateral*/
+    
+    position: relative;/*Ligação com a configuração do poscionamento do banner*/
+
+}
+
+.img-wrapper/*configuração da imagem de fundo da tela */
+{ 
+    width: 100%; /*bordas laterais(largura)*/
+    
+    height: 100%; /*bordas horizontais(altura)*/
+    
+    overflow: hidden;
+   
+    background-color: rgba(0,0,0,0.8)/*Função para definir a cor do background*/
+}
+
+.img-wrapper img/*configuração da imagem de fundo da tela*/
+{
+    width: 100%; 
+    
+    height: 100%;
+    
+    object-fit: cover;/*Não deixa a imagem ser cobrida ou exprimida*/
+    
+    opacity: 0.5;/*Deixa a imagem mais escura*/
+    animation: zoom 25s;/*Animação de entrada*/
+}
+
+@keyframes zoom/*Configuração da animação de entrada*/
+{
+   0%{
+     transform: scale(1.3);
+   }
+   100%{
+    transform: scale(1);
+   }
+}
+
+.banner/*Configuração da escrita inicial*/
+{
+
+    position: absolute;/**/
+
+    left: 15%;/*Relação do elemento com a borda esquerda*/
+
+    top: 30%;/*Relação do elemento com a borda superior*/
+}
+
+.banner h1/*configuração do h1 dentro do banner*/
+{
+   color: #ffffff;/*cor da fonte*/
+   
+   font-size: 3.5rem;/*Tamanho da fonte,rem significa que ele vai ter o mesmo tamanho de fonte do elemento pai dele*/
+   
+   font-family: "Baloo Da 2",serif;/*Modelo da font*/
+   
+   font-weight: 200;/*Peso da font*/
+   
+   text-shadow: 0.3rem 0.4rem 2px rgba(0,0,0,4);/*sombra da font*/
+   
+   line-height: 3.5rem;/*Distancia das letras*/
+
+   margin-bottom: 2rem;/*Espaço entre as linhas */
+   
+   opacity: 0;
+
+   animation: moveBanner 1s 0.5s forwards;/*Animação do banner*/
+}
+
+.banner p/*configuração do paragrafro dentro do banner*/
+{
+     font-family: "Josefin Slab", serif;
+     color: #fff;
+     font-size: 2rem;
+     text-shadow: 0.2rem 0.2rem 2px rgba(0,0,0,4);
+     margin-bottom: 2rem;
+     opacity: 0;
+     animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button/*configuração do button dentro do banner*/
+{
+     font-family: "Mulish", serif;
+     color:white;/*Cor da letra*/
+     text-transform: uppercase;/*Deixando todas as letras do botão maiuscula*/
+     letter-spacing: .1rem;/*Espaço entre as letras*/
+     background-color: purple;
+     background: #6a3093; 
+     background: -webkit-linear-gradient(to right, #a044ff, #6a3093); 
+     background: linear-gradient(to right, #a044ff, #6a3093);
+     padding: .5rem 3rem;/*Margem interna do botão*/
+     border: none;
+     border-radius: 5px;/*Raio da borda do botão*/
+     cursor: pointer;    
+     opacity: 0;
+     animation: moveBanner 1s 0.9s forwards;
+}
+
+.banner button:hover/*O que acontece com o botão quando passa o mause*/
+{
+     opacity: 0.8;
+}
+
+@keyframes moveBanner/*Animação do banner*/
+{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg); 
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
