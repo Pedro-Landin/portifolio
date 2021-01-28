@@ -116,12 +116,92 @@
           </div>
         </div>
         <div class="conhecimentos-img-wrapper">
-         <img src="imagens/conhecimentos.png" alt="omagem conhecimento">
+         <img src="imagens/conhecimentos.png" alt="imagem conhecimento">
         </div>
       </div>
     </section>
   
-  
+    <section class="sessao-projetos">
+       <div class="sessao-header">
+         <h1>Projetos</h1>
+       </div>
+       <div class="projetos">
+         <div class="card">
+           <div class="card-img-wrapper">
+             <img src="imagens/proj1.jpg" alt="imagem do projeto de fast Food" />
+           </div>
+           <div class="card-info">
+             <h2>Mafi Burguer</h2>
+             <h3>Java</h3>
+             <p>O projeto trata-se de um software de auxilio para a gestão de uma rede de Fast Food</p>
+             <button class="btn">Saiba Mais</button>
+           </div>
+          </div>
+          
+          <div class="card">
+           <div class="card-img-wrapper">
+             <img src="imagens/proj2.jpg" alt="imagem do projeto de eventos">
+           </div>
+           <div class="card-info">
+             <h2>Pro Event</h2>
+             <h3>Java</h3>
+             <p>O projeto trata-se de um software para auxiliar na produção de eventos</p>
+             <button class="btn">Saiba Mais</button>
+           </div>
+         </div>
+       </div>
+    </section>
+      
+    <section class="sessao-contato">
+      <div class="contato-wrapper">
+        <div class="contato-left"></div>
+        <div class="contato-right">
+          <h1>Contato</h1>
+          <form>
+           <div class="input-group">
+             <input type="text" class="field" id="nome">
+             <label for="nome" class="field-label">Nome</label>
+           </div>
+           <div class="input-group">
+             <input type="text" class="field" id="email">
+             <label for="email"class="field-label">E-mail</label>
+           </div>
+           <div class="input-group">
+            <textarea class="field" id="mensagem"></textarea>
+             <label for="mensagem"class="field-label">Mensagem</label>
+           </div>
+           <button type="submit" class="btn btn-submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="sessao-orcamento">
+     <div class="orcamento-wrapper">
+       <h1>Faça um orçamento</h1>
+       <form>
+        <label for="qtde">Quantidade de Páginas</label>
+        <input type="number" min= "1" name="qtde" id="qtde">
+        <label for="js">Preciso de um script JS</label>
+        <input type="checkbox" name="js" id="js">
+        <label>Layout</label>
+        <div class="group-layout">
+          <div>
+            <input type="radio" name="layout" id="layout-sim">
+            <label for="layout-sim">Preciso de um layout</label>
+          </div>
+          <div>
+            <input type="radio" name="layout" id="layout-nao">
+            <label for="layout-nao">Já tenho um layout</label>
+          </div>
+        </div>
+        <label for="prazo">Prazo</label>
+        <input type="range" name="prazo" id="prazo">
+        <button class="btn btn-orcamento" type="submit">Enviar</button>
+     </form>
+     </div>
+    </section>
+     
   </div>
 
 </body>
