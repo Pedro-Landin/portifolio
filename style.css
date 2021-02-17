@@ -403,8 +403,8 @@ header
 
 .projetos/*Formatando a sessão de projetos*/
 {
-  
-    height: 85vh;
+    
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
 }
